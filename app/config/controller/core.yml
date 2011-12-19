@@ -1,0 +1,9 @@
+core:
+    controller: 'Fabr\CoreBundle\Controller\DefaultController'
+    template:   'FabrCoreBundle:Default:execute.%s.twig'
+core_login:
+    controller: 'Fabr\CoreBundle\Controller\LoginController'
+    template:   'FabrCoreBundle:Login:execute.%s.twig'
+core_department_view:
+    controller: 'Fabr\CoreBundle\Controller\DepartmentViewController'
+    template:   'FabrCoreBundle:DepartmentView:execute.%s.twig'

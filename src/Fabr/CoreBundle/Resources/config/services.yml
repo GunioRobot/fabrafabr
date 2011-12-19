@@ -1,0 +1,12 @@
+parameters:
+    fabr.registry.class: "Fabr\Component\Registry\Container"
+    fabr.front.class:    "Fabr\Component\Controller\Front\Front"
+    fabr.front.config:   "%kernel.root_dir%/config/controller/core.yml"
+
+services:
+    fabr.registry:
+        class: %fabr.registry.class%
+        arguments: [@service_container]
+    fabr.front:
+        class: %fabr.front.class%
+        arguments: [@templating, @fabr.registry, %fabr.front.config%]

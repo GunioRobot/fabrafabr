@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <h1>{% if department %}{{ department.title }}{% else %}Сотрудники{% endif %}</h1>
+
+    {% for user in users %}
+        <div>
+            {{ user.lastname }} {{ user.firstname }} {{ user.midname }}
+            &mdash;
+            {{ user.department.title }}
+        </div>
+    {% endfor %}
+{% endblock %}

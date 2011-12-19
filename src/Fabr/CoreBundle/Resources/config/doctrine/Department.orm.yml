@@ -1,0 +1,23 @@
+Fabr\CoreBundle\Entity\Department:
+    type: entity
+    table: department
+    repositoryClass: Fabr\CoreBundle\Entity\DepartmentRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '255'
+        title:
+            type: string
+            length: '255'
+        createdAt:
+            type: datetime
+            length: null
+    manyToOne:
+        parent:
+            targetEntity: Fabr\CoreBundle\Entity\Department
+    lifecycleCallbacks: {  }

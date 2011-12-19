@@ -1,0 +1,21 @@
+core:
+    pattern:  /
+    defaults: { _controller: fabr.front:execute }
+
+core_login:
+    pattern:  /login
+    defaults: { _controller: fabr.front:execute }
+
+core_login_check:
+    pattern:  /login/check
+
+core_logout:
+    pattern:  /logout
+
+core_department_view:
+    pattern:  /users/{department}
+    defaults:
+        _controller: fabr.front:execute
+        department: ''
+    requirements:
+        department: .*

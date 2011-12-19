@@ -1,0 +1,35 @@
+Fabr\CoreBundle\Entity\User:
+    type: entity
+    table: user
+    repositoryClass: Fabr\CoreBundle\Entity\UserRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        email:
+            type: string
+            length: '100'
+        password:
+            type: string
+            length: '100'
+        salt:
+            type: string
+            length: '32'
+        firstname:
+            type: string
+            length: '100'
+        midname:
+            type: string
+            length: '100'
+        lastname:
+            type: string
+            length: '100'
+        createdAt:
+            type: datetime
+            length: null
+    manyToOne:
+        department:
+            targetEntity: Fabr\CoreBundle\Entity\Department
+    lifecycleCallbacks: {  }
