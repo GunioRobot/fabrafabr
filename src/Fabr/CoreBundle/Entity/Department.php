@@ -102,4 +102,10 @@ class Department
     {
         return $this->parent;
     }
+
+    public function getPath()
+    {
+        $parent = $this->getParent();
+        return ($parent ? $parent->getPath() . '/' : '') . $this->getName();
+    }
 }

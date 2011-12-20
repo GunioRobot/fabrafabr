@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    {% for item in breadcrumb %}
+        <a href="{{ path(item.route, item.params) }}">{{ item.title }}</a> &rarr;
+    {% endfor %}
+    
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for item in submenu %}
+            <li><a href="{{ path(item.route, item.params) }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    {% for user in users %}
+        <div>
+            {{ user.lastname }} {{ user.firstname }} {{ user.midname }}
+            &mdash;
+            {{ user.department.title }}
+        </div>
+    {% endfor %}
+{% endblock %}

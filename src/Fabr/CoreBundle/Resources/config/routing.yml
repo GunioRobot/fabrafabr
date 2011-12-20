@@ -1,10 +1,10 @@
 core:
     pattern:  /
-    defaults: { _controller: fabr.front:execute }
+    defaults: { _controller: 'FabrCoreBundle:Default:view' }
 
 core_login:
     pattern:  /login
-    defaults: { _controller: fabr.front:execute }
+    defaults: { _controller: 'FabrCoreBundle:Security:login' }
 
 core_login_check:
     pattern:  /login/check
@@ -13,9 +13,9 @@ core_logout:
     pattern:  /logout
 
 core_department_view:
-    pattern:  /users/{department}
+    pattern:  /users/{path}
     defaults:
-        _controller: fabr.front:execute
-        department: ''
+        _controller: 'FabrCoreBundle:Department:view'
+        path: ''
     requirements:
-        department: .*
+        path: .*

@@ -2,16 +2,17 @@
 
 namespace Fabr\CoreBundle\Controller;
 
-use Fabr\Component\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends AbstractController
+class DefaultController extends Controller
 {
     /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @Template
      * @return array
      */
-    public function execute(Request $request)
+    public function viewAction()
     {
         return array();
     }
